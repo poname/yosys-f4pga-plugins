@@ -205,28 +205,6 @@ double wall_time()
     return time_since_epoch.count();
 }
 
-/*
- * Tokenizes a string and returns an array where each element is a
- * token and a pointer (that needs to be passed through) with the
- * size of the array
- */
-static char **string_to_token_array(char *string, int *size)
-{
-    char **arr = NULL;
-
-    char *token = strtok(string, " \n\t");
-    int i = 0;
-
-    while (token != NULL) {
-        arr = (char **)vtr::realloc(arr, sizeof(char *) * (i + 1));
-        arr[i] = token;
-        token = strtok(NULL, " \n\t");
-        i++;
-    }
-    *size = (i);
-    return arr;
-}
-
 /**
  * This overrides default sprintf since odin uses sprintf to concatenate strings
  * sprintf has undefined behavior for such and this prevents string overriding if
