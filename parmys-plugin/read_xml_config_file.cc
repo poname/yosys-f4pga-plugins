@@ -152,9 +152,6 @@ void read_debug_switches(pugi::xml_node a_node, config_t *config, const pugiutil
     pugi::xml_node child;
 
     child = get_single_child(a_node, "output_ast_graphs", loc_data, OPTIONAL);
-    if (child != NULL) {
-        atoi(child.child_value());
-    }
 
     child = get_single_child(a_node, "output_netlist_graphs", loc_data, OPTIONAL);
     if (child != NULL) {
@@ -167,9 +164,6 @@ void read_debug_switches(pugi::xml_node a_node, config_t *config, const pugiutil
     }
 
     child = get_single_child(a_node, "print_parse_tokens", loc_data, OPTIONAL);
-    if (child != NULL) {
-        atoi(child.child_value());
-    }
 
     return;
 }
@@ -269,9 +263,6 @@ void read_optimizations(pugi::xml_node a_node, config_t *config, const pugiutil:
     child = get_single_child(a_node, "adder", loc_data, OPTIONAL);
     if (child != NULL) {
         prop = get_attribute(child, "size", loc_data, OPTIONAL).as_string(NULL);
-        if (prop != NULL) {
-            atoi(prop);
-        }
 
         prop = get_attribute(child, "threshold_size", loc_data, OPTIONAL).as_string(NULL);
         if (prop != NULL) {
@@ -280,9 +271,6 @@ void read_optimizations(pugi::xml_node a_node, config_t *config, const pugiutil:
             config->min_threshold_adder = 0;
 
         prop = get_attribute(child, "padding", loc_data, OPTIONAL).as_string(NULL);
-        if (prop != NULL) {
-            atoi(prop);
-        }
 
         prop = get_attribute(child, "fixed", loc_data, OPTIONAL).as_string(NULL);
         if (prop != NULL) {
@@ -291,9 +279,6 @@ void read_optimizations(pugi::xml_node a_node, config_t *config, const pugiutil:
             config->fixed_hard_adder = 1;
 
         prop = get_attribute(child, "fracture", loc_data, OPTIONAL).as_string(NULL);
-        if (prop != NULL) {
-            atoi(prop);
-        }
     }
 
     return;
