@@ -950,19 +950,6 @@ signal_list_t *copy_input_signals(signal_list_t *signalsvar)
 }
 
 /*---------------------------------------------------------------------------------------------
- * (function: sort_signal_list_alphabetically)
- * Bubble sort alphabetically
- * Andrew: changed to a quick sort because this function
- *         was consuming 99.6% of compile time for mcml.v
- *-------------------------------------------------------------------------------------------*/
-static int compare_npin_t_names(const void *p1, const void *p2)
-{
-    npin_t *pin1 = *(npin_t *const *)p1;
-    npin_t *pin2 = *(npin_t *const *)p2;
-    return strcmp(pin1->name, pin2->name);
-}
-
-/*---------------------------------------------------------------------------------------------
  * (function: make_output_pins_for_existing_node)
  * 	Looks at a node and extracts the output pins into a signal list so they can be accessed
  * 	in this form
