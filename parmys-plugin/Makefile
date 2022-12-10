@@ -22,29 +22,29 @@ SOURCES = parmys.cc \
 		  parmys_update.cc \
 		  parmys_utils.cc \
 		  parmys_resolve.cc \
-		  adders.cc \
-		  enum_str.cc \
-		  MixingOptimization.cc \
-		  read_xml_config_file.cc \
-		  odin_error.cc \
-		  odin_util.cc \
-		  netlist_statistic.cc \
-		  netlist_utils.cc \
-		  netlist_check.cc \
-		  netlist_cleanup.cc \
-		  node_creation_library.cc \
-		  multipliers.cc \
-		  subtractions.cc \
-		  HardSoftLogicMixer.cc \
-		  odin_ii.cc \
-		  string_cache.cc \
-		  partial_map.cc \
-		  hard_blocks.cc \
-		  BlockMemories.cc \
-		  memories.cc \
-		  netlist_visualizer.cc \
-		  Hashtable.cc \
-		  ast_util.cc \
+		  src/adders.cc \
+		  src/enum_str.cc \
+		  src/MixingOptimization.cc \
+		  src/read_xml_config_file.cc \
+		  src/odin_error.cc \
+		  src/odin_util.cc \
+		  src/netlist_statistic.cc \
+		  src/netlist_utils.cc \
+		  src/netlist_check.cc \
+		  src/netlist_cleanup.cc \
+		  src/node_creation_library.cc \
+		  src/multipliers.cc \
+		  src/subtractions.cc \
+		  src/HardSoftLogicMixer.cc \
+		  src/odin_ii.cc \
+		  src/string_cache.cc \
+		  src/partial_map.cc \
+		  src/hard_blocks.cc \
+		  src/BlockMemories.cc \
+		  src/memories.cc \
+		  src/netlist_visualizer.cc \
+		  src/Hashtable.cc \
+		  src/ast_util.cc \
 		  ../third_party/vtr-libs/vtrutil/src/vtr_util.cc \
 		  ../third_party/vtr-libs/vtrutil/src/vtr_token.cc \
 		  ../third_party/vtr-libs/vtrutil/src/vtr_memory.cc \
@@ -76,6 +76,7 @@ SOURCES = parmys.cc \
 
 include ../Makefile_plugin.common
 
+CXXFLAGS += -I./include
 CXXFLAGS += -I../third_party/pugixml/src
 CXXFLAGS += -I../third_party/vtr-libs/archfpga/src
 CXXFLAGS += -I../third_party/vtr-libs/log/src
@@ -91,6 +92,7 @@ CXXFLAGS += -std=$(CXXSTD) -Os
 
 LDLIBS += -lpthread
 
+TECHLIBS_DIR = techlibs
 VERILOG_MODULES = adff2dff.v \
 				  adffe2dff.v \
 				  aldff2dff.v \
@@ -99,8 +101,8 @@ VERILOG_MODULES = adff2dff.v \
 
 # install_modules: $(VERILOG_MODULES)
 # install -D $< $(YOSYS_PLUGINS_DIR)/parmys/$<
-install_modules: $(VERILOG_MODULES)
-	$(foreach f,$^,install -D $(f) $(YOSYS_DATA_DIR)/parmys/$(f);)
+install_modules:
+	$(foreach f, $(wildcard $(TECHLIBS_DIR)/*), install -D $(f) $(YOSYS_DATA_DIR)/parmys/$(notdir $(f));)
 
 install: install_modules
 
