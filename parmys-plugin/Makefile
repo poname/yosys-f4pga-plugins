@@ -56,7 +56,7 @@ SOURCES = parmys.cc \
 		  ../third_party/vtr-verilog-to-routing/libvtrutil/src/vtr_path.cc \
 		  ../third_party/vtr-verilog-to-routing/libvtrutil/src/vtr_assert.cc \
 		  ../third_party/vtr-verilog-to-routing/liblog/src/log.cc \
-		  ../third_party/vtr-verilog-to-routing/libpugixml/src/pugixml.cc \
+		  ../third_party/pugixml/src/pugixml.cpp \
 		  ../third_party/vtr-verilog-to-routing/libargparse/src/argparse.cc \
 		  ../third_party/vtr-verilog-to-routing/libargparse/src/argparse_formatter.cc \
 		  ../third_party/vtr-verilog-to-routing/libargparse/src/argparse_util.cc \
@@ -76,7 +76,7 @@ SOURCES = parmys.cc \
 
 include ../Makefile_plugin.common
 
-CXXFLAGS += -I../third_party/vtr-verilog-to-routing/libpugixml/src
+CXXFLAGS += -I../third_party/pugixml/src
 CXXFLAGS += -I../third_party/vtr-verilog-to-routing/libarchfpga/src
 CXXFLAGS += -I../third_party/vtr-verilog-to-routing/liblog/src
 CXXFLAGS += -I../third_party/vtr-verilog-to-routing/libpugiutil/src
