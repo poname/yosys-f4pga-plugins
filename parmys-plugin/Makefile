@@ -45,45 +45,45 @@ SOURCES = parmys.cc \
 		  netlist_visualizer.cc \
 		  Hashtable.cc \
 		  ast_util.cc \
-		  ../third_party/vtr-verilog-to-routing/libvtrutil/src/vtr_util.cc \
-		  ../third_party/vtr-verilog-to-routing/libvtrutil/src/vtr_token.cc \
-		  ../third_party/vtr-verilog-to-routing/libvtrutil/src/vtr_memory.cc \
-		  ../third_party/vtr-verilog-to-routing/libvtrutil/src/vtr_list.cc \
-		  ../third_party/vtr-verilog-to-routing/libvtrutil/src/vtr_log.cc \
-		  ../third_party/vtr-verilog-to-routing/libvtrutil/src/vtr_expr_eval.cc \
-		  ../third_party/vtr-verilog-to-routing/libvtrutil/src/vtr_digest.cc \
-		  ../third_party/vtr-verilog-to-routing/libvtrutil/src/vtr_math.cc \
-		  ../third_party/vtr-verilog-to-routing/libvtrutil/src/vtr_path.cc \
-		  ../third_party/vtr-verilog-to-routing/libvtrutil/src/vtr_assert.cc \
-		  ../third_party/vtr-verilog-to-routing/liblog/src/log.cc \
+		  ../third_party/vtr-libs/vtrutil/src/vtr_util.cc \
+		  ../third_party/vtr-libs/vtrutil/src/vtr_token.cc \
+		  ../third_party/vtr-libs/vtrutil/src/vtr_memory.cc \
+		  ../third_party/vtr-libs/vtrutil/src/vtr_list.cc \
+		  ../third_party/vtr-libs/vtrutil/src/vtr_log.cc \
+		  ../third_party/vtr-libs/vtrutil/src/vtr_expr_eval.cc \
+		  ../third_party/vtr-libs/vtrutil/src/vtr_digest.cc \
+		  ../third_party/vtr-libs/vtrutil/src/vtr_math.cc \
+		  ../third_party/vtr-libs/vtrutil/src/vtr_path.cc \
+		  ../third_party/vtr-libs/vtrutil/src/vtr_assert.cc \
+		  ../third_party/vtr-libs/log/src/log.cc \
 		  ../third_party/pugixml/src/pugixml.cpp \
-		  ../third_party/vtr-verilog-to-routing/libargparse/src/argparse.cc \
-		  ../third_party/vtr-verilog-to-routing/libargparse/src/argparse_formatter.cc \
-		  ../third_party/vtr-verilog-to-routing/libargparse/src/argparse_util.cc \
-		  ../third_party/vtr-verilog-to-routing/librtlnumber/src/rtl_int.cc \
-		  ../third_party/vtr-verilog-to-routing/librtlnumber/src/rtl_utils.cc \
-		  ../third_party/vtr-verilog-to-routing/libpugiutil/src/pugixml_loc.cc \
-		  ../third_party/vtr-verilog-to-routing/libpugiutil/src/pugixml_util.cc \
-		  ../third_party/vtr-verilog-to-routing/libarchfpga/src/physical_types.cc \
-		  ../third_party/vtr-verilog-to-routing/libarchfpga/src/read_xml_util.cc \
-		  ../third_party/vtr-verilog-to-routing/libarchfpga/src/arch_error.cc \
-		  ../third_party/vtr-verilog-to-routing/libarchfpga/src/physical_types_util.cc \
-		  ../third_party/vtr-verilog-to-routing/libarchfpga/src/arch_check.cc \
-		  ../third_party/vtr-verilog-to-routing/libarchfpga/src/arch_util.cc \
-		  ../third_party/vtr-verilog-to-routing/libarchfpga/src/read_xml_arch_file.cc \
-		  ../third_party/vtr-verilog-to-routing/libarchfpga/src/parse_switchblocks.cc \
-		  ../third_party/vtr-verilog-to-routing/libarchfpga/src/echo_arch.cc
+		  ../third_party/vtr-libs/argparse/src/argparse.cc \
+		  ../third_party/vtr-libs/argparse/src/argparse_formatter.cc \
+		  ../third_party/vtr-libs/argparse/src/argparse_util.cc \
+		  ../third_party/vtr-libs/rtlnumber/src/rtl_int.cc \
+		  ../third_party/vtr-libs/rtlnumber/src/rtl_utils.cc \
+		  ../third_party/vtr-libs/pugiutil/src/pugixml_loc.cc \
+		  ../third_party/vtr-libs/pugiutil/src/pugixml_util.cc \
+		  ../third_party/vtr-libs/archfpga/src/physical_types.cc \
+		  ../third_party/vtr-libs/archfpga/src/read_xml_util.cc \
+		  ../third_party/vtr-libs/archfpga/src/arch_error.cc \
+		  ../third_party/vtr-libs/archfpga/src/physical_types_util.cc \
+		  ../third_party/vtr-libs/archfpga/src/arch_check.cc \
+		  ../third_party/vtr-libs/archfpga/src/arch_util.cc \
+		  ../third_party/vtr-libs/archfpga/src/read_xml_arch_file.cc \
+		  ../third_party/vtr-libs/archfpga/src/parse_switchblocks.cc \
+		  ../third_party/vtr-libs/archfpga/src/echo_arch.cc
 
 include ../Makefile_plugin.common
 
 CXXFLAGS += -I../third_party/pugixml/src
-CXXFLAGS += -I../third_party/vtr-verilog-to-routing/libarchfpga/src
-CXXFLAGS += -I../third_party/vtr-verilog-to-routing/liblog/src
-CXXFLAGS += -I../third_party/vtr-verilog-to-routing/libpugiutil/src
-CXXFLAGS += -I../third_party/vtr-verilog-to-routing/librtlnumber/src/include
-CXXFLAGS += -I../third_party/vtr-verilog-to-routing/librtlnumber/src
-CXXFLAGS += -I../third_party/vtr-verilog-to-routing/libvtrutil/src
-CXXFLAGS += -I../third_party/vtr-verilog-to-routing/libargparse/src
+CXXFLAGS += -I../third_party/vtr-libs/archfpga/src
+CXXFLAGS += -I../third_party/vtr-libs/log/src
+CXXFLAGS += -I../third_party/vtr-libs/pugiutil/src
+CXXFLAGS += -I../third_party/vtr-libs/rtlnumber/src/include
+CXXFLAGS += -I../third_party/vtr-libs/rtlnumber/src
+CXXFLAGS += -I../third_party/vtr-libs/vtrutil/src
+CXXFLAGS += -I../third_party/vtr-libs/argparse/src
 
 CXXSTD := c++14
 CXXFLAGS += -std=$(CXXSTD) -Os
