@@ -84,6 +84,7 @@ CXXFLAGS += -I../third_party/vtr-libs/rtlnumber/src/include
 CXXFLAGS += -I../third_party/vtr-libs/rtlnumber/src
 CXXFLAGS += -I../third_party/vtr-libs/vtrutil/src
 CXXFLAGS += -I../third_party/vtr-libs/argparse/src
+CXXFLAGS += -I../third_party/vtr-libs/vpr/src/draw
 
 CXXSTD := c++14
 CXXFLAGS += -std=$(CXXSTD) -Os
@@ -102,3 +103,8 @@ install_modules: $(VERILOG_MODULES)
 	$(foreach f,$^,install -D $(f) $(YOSYS_DATA_DIR)/parmys/$(f);)
 
 install: install_modules
+
+clean_modules:
+	rm -rf ./third_party
+
+clean: clean_modules

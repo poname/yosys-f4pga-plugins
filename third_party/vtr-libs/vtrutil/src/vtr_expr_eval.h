@@ -11,7 +11,7 @@
 #include "vtr_error.h"
 #include "vtr_string_view.h"
 #include "vtr_flat_map.h"
-#include "../../libvpr/src/draw/breakpoint_state_globals.h"
+#include "breakpoint_state_globals.h"
 
 /**
  * @file

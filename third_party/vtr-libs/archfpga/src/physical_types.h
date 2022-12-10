@@ -36,10 +36,10 @@
 #include <limits>
 #include <numeric>
 
-#include "../../libvtrutil/src/vtr_ndmatrix.h"
-#include "../../libvtrutil/src/vtr_hash.h"
-#include "../../libvtrutil/src/vtr_bimap.h"
-#include "../../libvtrutil/src/vtr_string_interning.h"
+#include "vtr_ndmatrix.h"
+#include "vtr_hash.h"
+#include "vtr_bimap.h"
+#include "vtr_string_interning.h"
 
 #include "logic_types.h"
 #include "clock_types.h"

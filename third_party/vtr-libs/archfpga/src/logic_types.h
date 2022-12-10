@@ -10,7 +10,7 @@
 #ifndef LOGIC_TYPES_H
 #define LOGIC_TYPES_H
 
-#include "../../libvtrutil/src/vtr_list.h"
+#include "vtr_list.h"
 #include <vector>
 #include <string>
 
