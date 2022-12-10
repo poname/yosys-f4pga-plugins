@@ -45,11 +45,11 @@ jobs:
           ./parmys-plugin/aldffe2dff.v
           ./third_party/minilitex_ddr_arty/minilitex_ddr_arty.v
           ./third_party/VexRiscv_Lite/VexRiscv_Lite.v
-          ./third_party/vtr-verilog-to-routing/libarchfpga/arch/mult_luts_arch.xml
-          ./third_party/vtr-verilog-to-routing/libarchfpga/arch/sample_arch.xml
-          ./third_party/vtr-verilog-to-routing/libargparse/.travis.yml
-          ./third_party/vtr-verilog-to-routing/librtlnumber/Makefile
-          ./third_party/vtr-verilog-to-routing/librtlnumber/verify_librtlnumber.sh
-          ./third_party/vtr-verilog-to-routing/librtlnumber/unit_test/Makefile
+          ./third_party/vtr-libs/archfpga/arch/mult_luts_arch.xml
+          ./third_party/vtr-libs/archfpga/arch/sample_arch.xml
+          ./third_party/vtr-libs/argparse/.travis.yml
+          ./third_party/vtr-libs/rtlnumber/Makefile
+          ./third_party/vtr-libs/rtlnumber/verify_librtlnumber.sh
+          ./third_party/vtr-libs/rtlnumber/unit_test/Makefile
         third_party: |
           ./third_party/googletest/
