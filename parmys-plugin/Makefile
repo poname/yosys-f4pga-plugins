@@ -57,9 +57,9 @@ SOURCES = parmys.cc \
 		  ../third_party/vtr-libs/vtrutil/src/vtr_assert.cc \
 		  ../third_party/vtr-libs/log/src/log.cc \
 		  ../third_party/pugixml/src/pugixml.cpp \
-		  ../third_party/vtr-libs/argparse/src/argparse.cc \
-		  ../third_party/vtr-libs/argparse/src/argparse_formatter.cc \
-		  ../third_party/vtr-libs/argparse/src/argparse_util.cc \
+		  ../third_party/libargparse/src/argparse.cpp \
+		  ../third_party/libargparse/src/argparse_formatter.cpp \
+		  ../third_party/libargparse/src/argparse_util.cpp \
 		  ../third_party/vtr-libs/rtlnumber/src/rtl_int.cc \
 		  ../third_party/vtr-libs/rtlnumber/src/rtl_utils.cc \
 		  ../third_party/vtr-libs/pugiutil/src/pugixml_loc.cc \
@@ -78,13 +78,13 @@ include ../Makefile_plugin.common
 
 CXXFLAGS += -I./include
 CXXFLAGS += -I../third_party/pugixml/src
+CXXFLAGS += -I../third_party/libargparse/src
 CXXFLAGS += -I../third_party/vtr-libs/archfpga/src
 CXXFLAGS += -I../third_party/vtr-libs/log/src
 CXXFLAGS += -I../third_party/vtr-libs/pugiutil/src
 CXXFLAGS += -I../third_party/vtr-libs/rtlnumber/src/include
 CXXFLAGS += -I../third_party/vtr-libs/rtlnumber/src
 CXXFLAGS += -I../third_party/vtr-libs/vtrutil/src
-CXXFLAGS += -I../third_party/vtr-libs/argparse/src
 CXXFLAGS += -I../third_party/vtr-libs/vpr/src/draw
 
 CXXSTD := c++14
